@@ -1,0 +1,12 @@
+<h1>Todos</h1>
+<a href="#" onclick="displayCreateForm(); return false;">Create Todo</a>
+<a href="#" onclick="getTodos(); return false;">Todos</a>
+<hr>
+<div id="todo-form"></div>
+<div id="main">
+  <ul>
+    <% @todos.each do |todo| %>
+      <li><%= todo.title %> - <%= todo.complete ? 'Completed' : 'Not Completed'%></li>
+    <% end %>
+  </ul>
+</div>
